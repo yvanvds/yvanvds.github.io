@@ -5,6 +5,8 @@ title: MSVC Crossplatform Development Part 1
 This is the first part of a series about crossplatform development with Visual Studio. A small C++ library will be created and ported to all possible platforms. C# wrapper libraries will also be created and used.
 <!--more--> 
 
+The complete source code for this series can be found on [GitHub](https://github.com/yvanvds/yvanvds.github.io/tree/master/codeProjects/DemoTools).
+
 ## Setup
 
 In this first part we'll setup a solution which will contain all projects. We'll start with a Shared Items Project, which will contain the C++ code of our library.
@@ -189,3 +191,7 @@ const char * PlatformID::Get()
 	return pimpl->content.c_str();
 }
 {% endhighlight %}
+
+That's all the work we're gonna do on the actual library. At this point, your Solution Explorer should look like this:
+
+![Screenshot]({{ "/images/msvc_part1_2.png" | absolute_url }})
