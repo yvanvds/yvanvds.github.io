@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DemoTools</AssemblyName>
+  </PropertyGroup>
+
+  <Import Project="..\NetDemoTools\NetDemoTools.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <Content Include="..\DemoTools.Windows.Native\Release\DemoTools.x86.dll" Link="DemoTools.x86.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
