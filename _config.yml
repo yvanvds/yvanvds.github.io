@@ -28,3 +28,5 @@ github:
 
 # modifiers
 excerpt_separator: "<!--more-->"
+exclude: 
+- codeProjects
