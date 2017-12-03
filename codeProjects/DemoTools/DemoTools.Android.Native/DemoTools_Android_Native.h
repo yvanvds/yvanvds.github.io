@@ -3,6 +3,8 @@
 class DemoTools_Android_Native
 {
 public:
-    DemoTools_Android_Native();
-    ~DemoTools_Android_Native();
+	const char * getPlatformABI();
+	DemoTools_Android_Native();
+	~DemoTools_Android_Native();
 };
+

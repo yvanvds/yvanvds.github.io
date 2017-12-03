@@ -1,0 +1,10 @@
+%module DemoTools
+%{
+#include "..\DemoTools\Counter.h"
+#include "..\DemoTools\PlatformID.h"
+%}
+
+%rename(Add) operator+;
+
+%include "..\DemoTools\Counter.h"
+%include "..\DemoTools\PlatformID.h"
