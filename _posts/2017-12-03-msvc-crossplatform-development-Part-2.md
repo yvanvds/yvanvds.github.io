@@ -2,7 +2,7 @@
 layout: post
 title: MSVC Crossplatform Development Part 2
 ---
-We've got a Shared Items Project ready, but no actual library has been built so far. In this part we will add a Windows DLL in native C++. In the Solution Explorer, Right-click the `Libraries` folder we've created earlier and choose:
+We've got a Shared Items Project ready, but no actual library has been built so far. In this part we will add a Windows DLL in native C++. <!--more--> In the Solution Explorer, Right-click the `Libraries` folder we've created earlier and choose:
 
 `Add -> New Project -> Visual C++ -> Windows Desktop -> Dynamic-Link Library`
 
@@ -14,7 +14,7 @@ First, we're gonna add the Shared Project by right-clicking on the project Refer
 
 `Add Reference -> Shared Project -> DemoTools`
 
-## Set Project Properties
+## Project Properties
 
 The standard output directories for a project point to the Solution level. While that has its uses, I don't see any advantages to this when working with crossplatform code. We will redirect the generated files to the Project Directory.
 

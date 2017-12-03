@@ -3,6 +3,7 @@ layout: post
 title: MSVC Crossplatform Development Part 3
 ---
 So far, we got a Shared Items Project and a Windows DLL. In this part a console application will be added. This application offers the most direct way to test our library. (Well, Unit Tests aside that is. I do not want to go into unit tests in this series.)
+<!--more--> 
 
 Right-click the `Tests` folder we've created earlier and choose:
 
