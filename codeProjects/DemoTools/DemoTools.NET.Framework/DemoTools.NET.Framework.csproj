@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>DemoTools</AssemblyName>
+    <AssemblyName>DemoToolsNET</AssemblyName>
   </PropertyGroup>
 
   <Import Project="..\NetDemoTools\NetDemoTools.projitems" Label="Shared" />
 
   <ItemGroup>
-    <Content Include="..\DemoTools.Windows.Native\Release\DemoTools.x86.dll" Link="DemoTools.x86.dll">
+    <Content Include="..\DemoTools.Windows.Native\Release\Win32\DemoTools.dll" Link="DemoTools.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

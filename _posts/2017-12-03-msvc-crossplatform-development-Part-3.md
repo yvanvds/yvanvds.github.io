@@ -2,7 +2,7 @@
 layout: post
 title: MSVC Crossplatform Development Part 3
 ---
-So far, we got a Shared Items Project and a Windows DLL. In this part a console application will be added. This application offers the most direct way to test our library. (Well, Unit Tests aside that is. I do not want to go into unit tests in this series.)
+**C++ Application** So far, we got a Shared Items Project and a Windows DLL. In this part a console application will be added. This application offers the most direct way to test our library. (Well, Unit Tests aside that is. I do not want to go into unit tests in this series.)
 <!--more--> 
 
 Right-click the `Tests` folder we've created earlier and choose:
@@ -20,15 +20,13 @@ Name this project `NativeWindowsApp` and add a reference to the DLL project `Dem
     * Additional Include Directories: `..\DemoTools;`
 3. In C/C++ => Preprocessor *(All platforms and configurations)*
     * Preprocessor Definitions: add `_IMPORTDEMOTOOLS;`
-4. In Linker => General *(Debug Configuration)*
-    * Additional Library Directories: `..\DemoTools.Windows.Native\Debug;`
-5. In Linker => General *(Release Configuration)*
-    * Additional Library Directories: `..\DemoTools.Windows.Native\Release;`
-6. In Linker => Input *(Different values)*
-    * Additional Dependencies: `Demotools.x86.lib`
-    * Additional Dependencies: `Demotools.x86.Debug.lib`
-    * Additional Dependencies: `Demotools.x64.lib`
-    * Additional Dependencies: `Demotools.x64.Debug.lib`
+4. In Linker => General *(Different Values)*
+    * Additional Library Directories: `..\DemoTools.Windows.Native\Debug\Win32;`
+	* Additional Library Directories: `..\DemoTools.Windows.Native\Debug\x64;`
+	* Additional Library Directories: `..\DemoTools.Windows.Native\Release\Win32;`
+	* Additional Library Directories: `..\DemoTools.Windows.Native\Release\x64;`
+5. In Linker => Input *(All platforms and configurations)*
+    * Additional Dependencies: `Demotools.lib`
 
 The extra preprocessor definition is not really needed. It translates the macro `API` (used on class and function declarations) into `__declspec (dllimport)`. Look in `Preprocessor.h` if you don't know what I am talking about. Importing dll classes is not needed, but [Microsoft](https://msdn.microsoft.com/en-us/library/8fskxacy.aspx) recommends you do it anyway, because your code will be more optimized.
 
@@ -37,7 +35,7 @@ We also need to copy the DLL to the application output directory. **Do this in t
 Open `Properties -> Build Events -> Post-Build Event` and add this as Command Line. (Remember to use the correct name for every platform!)
 
 {% highlight raw %}
-copy /Y "$(ProjectDir)$(Configuration)\DemoTools.x86.dll" "..\NativeWindowsApp\$(Configuration)"
+copy /Y "$(ProjectDir)$(Configuration)\$(Platform)\DemoTools.dll" "..\NativeWindowsApp\$(Configuration)"
 {% endhighlight %}
 
 The previous command will copy the dll to the folder from which the console application will run. If you make changes to the classes in the shared project, the DLL will be compiled again and the file will be copied over anew. I recommend this approach for every output file you need somewhere. If you don't, you're gonna forget to do it manually sooner or later, and you'll end up wondering why your code changes are not reflected in the application.

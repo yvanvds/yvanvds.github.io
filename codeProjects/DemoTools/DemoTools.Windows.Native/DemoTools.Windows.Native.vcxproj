@@ -73,27 +73,27 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)\$(Configuration)\Intermediate\</IntDir>
-    <TargetName>DemoTools.x86.Debug</TargetName>
+    <OutDir>$(ProjectDir)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\$(Configuration)\$(Platform)\Intermediate\</IntDir>
+    <TargetName>DemoTools</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)\$(Configuration)\Intermediate\</IntDir>
-    <TargetName>DemoTools.x64.Debug</TargetName>
+    <OutDir>$(ProjectDir)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\$(Configuration)\$(Platform)\Intermediate\</IntDir>
+    <TargetName>DemoTools</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)\$(Configuration)\Intermediate\</IntDir>
-    <TargetName>DemoTools.x86</TargetName>
+    <OutDir>$(ProjectDir)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\$(Configuration)\$(Platform)\Intermediate\</IntDir>
+    <TargetName>DemoTools</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(ProjectDir)\$(Configuration)\</OutDir>
-    <IntDir>$(ProjectDir)\$(Configuration)\Intermediate\</IntDir>
-    <TargetName>DemoTools.x64</TargetName>
+    <OutDir>$(ProjectDir)\$(Configuration)\$(Platform)\</OutDir>
+    <IntDir>$(ProjectDir)\$(Configuration)\$(Platform)\Intermediate\</IntDir>
+    <TargetName>DemoTools</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -108,7 +108,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)$(Configuration)\DemoTools.x86.Debug.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
+      <Command>copy /Y "$(ProjectDir)$(Configuration)\$(Platform)\DemoTools.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,7 +124,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)$(Configuration)\DemoTools.x64.Debug.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
+      <Command>copy /Y "$(ProjectDir)$(Configuration)\$(Platform)\DemoTools.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -144,7 +144,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)$(Configuration)\DemoTools.x86.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
+      <Command>copy /Y "$(ProjectDir)$(Configuration)\$(Platform)\DemoTools.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -164,7 +164,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(ProjectDir)$(Configuration)\DemoTools.x64.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
+      <Command>copy /Y "$(ProjectDir)$(Configuration)\$(Platform)\DemoTools.dll" "..\NativeWindowsApp\$(Configuration)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -172,6 +172,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Generate.NET\DemoTools_wrap.cxx" />
     <ClCompile Include="DemoTools.Windows.Native.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="stdafx.cpp">

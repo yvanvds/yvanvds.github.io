@@ -2,7 +2,7 @@
 layout: post
 title: MSVC Crossplatform Development Part 6
 ---
-Now it is time to look at things from the C# side. We will use Swig to generate the wrapper code.
+**Swig** Now it is time to look at things from the C# side. We will use Swig to generate the wrapper code.
 <!--more-->
 
 ## Swig

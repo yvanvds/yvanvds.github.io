@@ -2,7 +2,7 @@
 layout: post
 title: MSVC Crossplatform Development Part 2
 ---
-We've got a Shared Items Project ready, but no actual library has been built so far. In this part we will add a Windows DLL in native C++. <!--more--> In the Solution Explorer, Right-click the `Libraries` folder we've created earlier and choose:
+**C++ Windows DLL** We've got a Shared Items Project ready, but no actual library has been built so far. In this part we will add a Windows DLL in native C++. <!--more--> In the Solution Explorer, Right-click the `Libraries` folder we've created earlier and choose:
 
 `Add -> New Project -> Visual C++ -> Windows Desktop -> Dynamic-Link Library`
 
@@ -21,14 +21,10 @@ The standard output directories for a project point to the Solution level. While
 `Project Properties -> Configuration Properties -> General`
 
 First select `All Configurations` and `All Platforms`. Change
-- Output Directory: $(ProjectDir)\$(Configuration)\
-- Intermediate Directory: $(ProjectDir)\$(Configuration)\Intermediate\
+- Output Directory: `$(ProjectDir)\$(Configuration)\$(Platform)\`
+- Intermediate Directory: `$(ProjectDir)\$(Configuration)\$(Platform)\Intermediate\`
 
-Next, set the Target Name for each configuration/platform combination:
-- DemoTools.x86
-- DemoTools.x86.Debug
-- DemoTools.x64
-- DemoTools.x64.Debug
+Next, set the Target Name to `DemoTools`
 
 ![Screenshot]({{ "/images/msvc_part2_2.png" | absolute_url }})
 

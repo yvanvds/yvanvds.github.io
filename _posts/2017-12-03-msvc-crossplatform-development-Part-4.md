@@ -2,12 +2,12 @@
 layout: post
 title: MSVC Crossplatform Development Part 4
 ---
-So far we didn't do anything crossplatformy, but that's gonna change now. In this part, we will create a dynamic native library for Android. 
+**C++ Android Library** So far we didn't do anything crossplatformy, but that's gonna change now. In this part, we will create a dynamic native library for Android. 
 <!--more--> 
 
 In the solution Explorer, Right-click the `Libraries` folder and choose:
 
-`Add -> New Project ->Visual C++ -> Cross Platform -> Android -> Dynamic Shared Library (Android)`
+`Add -> New Project -> Visual C++ -> Cross Platform -> Android -> Dynamic Shared Library (Android)`
 
 Name the library `DemoTools.Android.Native`
 

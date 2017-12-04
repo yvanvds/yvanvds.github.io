@@ -2,7 +2,7 @@
 layout: post
 title: MSVC Crossplatform Development Part 1
 ---
-This is the first part of a series about crossplatform development with Visual Studio. A small C++ library will be created and ported to all possible platforms. C# wrapper libraries will also be created and used.
+**C++ Library Code** This is the first part of a series about crossplatform development with Visual Studio. A small C++ library will be created and ported to all possible platforms. C# wrapper libraries will also be created and used.
 <!--more--> 
 
 The complete source code for this series can be found on [GitHub](https://github.com/yvanvds/yvanvds.github.io/tree/master/codeProjects/DemoTools).
