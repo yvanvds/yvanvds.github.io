@@ -187,6 +187,7 @@
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Generate.NET\DemoTools_wrap.cxx" />
     <ClCompile Include="DemoTools_Android_Native.cpp" />
   </ItemGroup>
   <ItemGroup>
