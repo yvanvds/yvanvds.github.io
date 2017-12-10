@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 2
 ---
 **C++ Windows DLL** We've got a Shared Items Project ready, but no actual library has been built so far. In this part we will add a Windows DLL in native C++. <!--more--> In the Solution Explorer, Right-click the `Libraries` folder we've created earlier and choose:

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 11
 ---
 **Android .NET Library** The first step to getting this library to work with Xamarin Forms will be a .NET library for every platform. We'll start with Android.

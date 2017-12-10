@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 9
 ---
 **.NET Universal Library** In this part we will create another .NET library for Universal Windows Applications. This library can be used to create UWP applications. 

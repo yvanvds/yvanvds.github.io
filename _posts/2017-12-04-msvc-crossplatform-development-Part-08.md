@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 8
 ---
 **WPF Application** The managed library from the previous part can easily be tested in a WPF application. 

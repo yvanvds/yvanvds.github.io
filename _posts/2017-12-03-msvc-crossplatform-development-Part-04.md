@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 4
 ---
 **C++ Android Library** So far we didn't do anything crossplatformy, but that's gonna change now. In this part, we will create a dynamic native library for Android. 

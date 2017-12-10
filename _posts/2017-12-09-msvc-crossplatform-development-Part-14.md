@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 14
 ---
 **Xamarin Forms Application** The new PCL library will now be used in a Xamarin Forms application. We will only be able to run it from android right now, but this will be enough to demonstrate the workflow.

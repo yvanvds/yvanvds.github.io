@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 13
 ---
 **Xamarin Forms Library** This library exposes the platform specific .NET libraries to Xamarin forms. We need several steps to do this.

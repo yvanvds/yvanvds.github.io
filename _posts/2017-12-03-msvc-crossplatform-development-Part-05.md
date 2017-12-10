@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 5
 ---
 **Android Native App** To test the android library, we'll add another application. Android Native Applications are running in an OpenGL loop. Without extra libraries we're a bit limited here. We cannot easily show text on a screen, for example. For simplicity's sake, we'll just send some output to the logs here.

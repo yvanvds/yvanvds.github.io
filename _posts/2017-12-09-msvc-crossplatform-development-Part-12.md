@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 12
 ---
 **Xamarin Android App** We will create a Xamarin Android application to test the previous library. 

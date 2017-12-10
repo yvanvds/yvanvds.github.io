@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 15
 ---
 **TODO** This is the end of this series for now. Let's go over what should be next.

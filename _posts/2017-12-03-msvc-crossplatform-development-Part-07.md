@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 7
 ---
 **.NET framework assembly** In this part, we will create a .NET framework library. This library can be used from within a WPF application. It will only work on Windows, but so do WPF applications.

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: MSVC Crossplatform Development Part 10
 ---
 **UWP Application** This application will allow us to test the Universal Windows libary. 
@@ -17,7 +17,7 @@ Set the target an minimum version to *Windows 10 Fall Creators Update* or newer.
 
 Next, add a reference to `DemoTools.NET.Universal`. We don't need to change any project settings.
 
-The xaml code and codebehind can be copied from the Uwp test project.
+The xaml markup and codebehind can be copied from the Uwp test project.
 
 At this point everything is in place, but the app will crash on PInvoke. I'll leave this for now, but a good read to solve this might be this [microsoft post](https://docs.microsoft.com/en-gb/cpp/porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app).
 
