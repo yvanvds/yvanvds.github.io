@@ -1,6 +1,7 @@
 ---
 layout: single
 title: MSVC Crossplatform Development Part 8
+toc: true
 ---
 **WPF Application** The managed library from the previous part can easily be tested in a WPF application. 
 <!--more--> 
@@ -14,6 +15,8 @@ Name the project `WpfApp`.
 ![Screenshot]({{ "/images/msvc_part8_1.png" | absolute_url }})
 
 Next, add a reference to `DemoTools.NET.Framework`. We don't need to change any project settings.
+
+## Xaml Markup
 
 For testing we'll add some code to `MainWindow.xaml`.
 {% highlight xaml %}
@@ -46,6 +49,8 @@ For testing we'll add some code to `MainWindow.xaml`.
     </Grid>
 </Window>
 {% endhighlight %}
+
+## Code-Behind
 
 And last, implement the button methods created above in `MainWindow.xaml.cs`.
 {% highlight C# %}

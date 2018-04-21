@@ -25,6 +25,7 @@ Now we need to add the native DLL to this project. We can't use different DLL's 
 * Don't put the link in a subfolder like `lib`. It won't work.
 * Make sure the managed dll is the same as the name used with Swig. *(We made sure of that by renaming the assembly.)*
 * Make sure the native dll name is different from the assembly dll name. In this case there isn't any conflict because we used `DemoTools.dll` and `DemoToolsNET.dll`.
+* If your native dll depends on other dll's, add them too. If you don't, and try to build an application later on, you will get an error telling you the dll cannot be found. This is confusing, because it shows the name of the primary dll as the one that is not found, even though it is present. While in fact the secondary dependancy of that dll is the culprit.
 
 Open the file properties of the link to `DemoTools.dll` and set:
 - Build Action: `Content`

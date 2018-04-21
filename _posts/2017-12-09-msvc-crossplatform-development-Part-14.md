@@ -8,7 +8,7 @@ title: MSVC Crossplatform Development Part 14
 
 Start by create a new project in the tests folder, called `XamarinApp`.
 
-`Add -> New Project -> Visual C++ -> Cross Platform -> Xamarin Forms`
+- `Add -> New Project -> Visual C++ -> Cross Platform -> Xamarin Forms`
 
 ![Screenshot]({{ "/images/msvc_part14_1.png" | absolute_url }})
 
@@ -28,7 +28,7 @@ namespace XamarinApp
 }
 {% endhighlight %}
 
-Change `MainPage.xaml` to:
+- Change `MainPage.xaml` to:
 
 {% highlight xaml %}
 <StackLayout>
@@ -52,7 +52,7 @@ Change `MainPage.xaml` to:
 </StackLayout>
 {% endhighlight %}
 
-Now add the codebehind:
+- Now add the codebehind:
 
 {% highlight c# %}
 
@@ -104,9 +104,8 @@ namespace XamarinApp
 
 ## XamarinApp.Android
 
-Add a reference to `DemoTools.NET.PCL` and to `DemoTools.NET.Android`.
-
-In `MainActivity.cs`, below `base.OnCreate(bundle);` add:
+- Add a reference to `DemoTools.NET.PCL` and to `DemoTools.NET.Android`.
+- In `MainActivity.cs`, below `base.OnCreate(bundle);` add:
 
 {% highlight c# %}
 XamarinApp.Global.DT = new PCLDemoTools.Manager();

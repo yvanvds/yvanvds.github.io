@@ -1,6 +1,7 @@
 ---
 layout: single
 title: MSVC Crossplatform Development Part 11
+toc: true
 ---
 **Android .NET Library** The first step to getting this library to work with Xamarin Forms will be a .NET library for every platform. We'll start with Android.
 <!--more--> 
@@ -13,9 +14,13 @@ Name the project `DemoTools.NET.Android`.
 
 ![Screenshot]({{ "/images/msvc_part11_1.png" | absolute_url }})
 
+## Add SWIG
+
 The previous .NET libraries were linked to the `DemoTools.Windows.Native` library. In order to use that library from within a .NET library, we had to add `Generate.NET/DemoTools_wrap.cxx` to the library. This library will be built upon the `DemoTools.Android.Native` library, so we will need to add the same file to this Android library.
 
-Once that is done, the Android .NET libraray can be configured:
+## Configure the project
+
+Once that is done, the Android .NET library can be configured:
 
 1. Delete `Class1.cs`.
 

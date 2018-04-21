@@ -11,24 +11,19 @@ The complete source code for this series can be found on [GitHub](https://github
 
 In this first part we'll setup a solution which will contain all projects. We'll start with a Shared Items Project, which will contain the C++ code of our library.
 
-`File -> New -> Project...`
+- `File -> New -> Project -> Visual C++ -> General -> Shared Items Project`
 
 ![Screenshot]({{ "/images/msvc_part1_1.png" | absolute_url }})
 
 Before adding code, we will setup our solution structure. In the Solution Explorer, right click the solution:
 
-`Add -> New Solution Folder`
+- `Add -> New Solution Folder`
+- Add two folders: `Libraries` and `Tests`. 
 
-Add two folders: `Libraries` and `Tests`. Next we will need some code files. In the Solution Explorer, right click the Shared Project:
+Next we will need some code files. In the Solution Explorer, right click the Shared Project:
 
-`Add -> New Item`
-
-Add 5 new files:
-- Preprocessor.h
-- Counter.h
-- Counter.cpp
-- PlatformID.h
-- PlatformID.cpp
+- `Add -> New Item`
+- Add 5 new files `Preprocessor.h`, `Counter.h`, `Counter.cpp`, `PlatformID.h`, `PlatformID.cpp`
 
 ## Preprocessor
 

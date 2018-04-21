@@ -1,6 +1,7 @@
 ---
 layout: single
 title: MSVC Crossplatform Development Part 12
+toc: true
 ---
 **Xamarin Android App** We will create a Xamarin Android application to test the previous library. 
 <!--more--> 
@@ -16,6 +17,8 @@ Name the project `NetAndroidApp`.
 Add a reference to `DemoTools.NET.Android`.
 
 Open `Resources\Layout\main.axml` and add this markup code:
+
+## Markup
 
 {% highlight axml %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,6 +48,8 @@ Open `Resources\Layout\main.axml` and add this markup code:
         android:layout_height="wrap_content" />
 </LinearLayout>
 {% endhighlight %}
+
+## Code
 
 Next, open `mainActivity.cs` and add the code to test the library: 
 

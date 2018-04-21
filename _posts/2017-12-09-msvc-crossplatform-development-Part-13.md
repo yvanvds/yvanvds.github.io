@@ -1,11 +1,12 @@
 ---
 layout: single
 title: MSVC Crossplatform Development Part 13
+toc: true
 ---
 **Xamarin Forms Library** This library exposes the platform specific .NET libraries to Xamarin forms. We need several steps to do this.
 <!--more--> 
 
-## Step 1: Create PCL Library
+## Step 1: Create a PCL Library
 
 In the solution Explorer, Right-click the `Libraries` folder and choose:
 
@@ -20,6 +21,8 @@ This library is a bit different from the ones we created before. We would like t
 One way to overcome this is to create an interface for the classes we would like to use. We don't reference any other project here. This will change the way we interact with our library, but all in all it is a rather clean way of dealing with this problem.
 
 After creating the project, a file called `DemoTools.NET.PCL.cs` is created. We don't need that file. You can safely delete it.
+
+### Counter Inferface
 
 Start with creating an interface for the `Counter` class. Add a new interface called `ICounter.cs` to the project with this content:
 
@@ -37,6 +40,8 @@ namespace DemoTools
 }
 {% endhighlight %}
 
+### PlatformID Interface
+
 The same is needed for the class `PlatformID`, implemented in `IPlatformID.cs`:
 
 {% highlight c# %}
@@ -50,6 +55,8 @@ namespace DemoTools
 {% endhighlight %}
 
 *Note that we replaced the `Get()` methods with read-only properties. We have to modify parts of out class anyway, so we might as well adapt more to the C# way of doing things with properties.*
+
+### Manager Interface
 
 Even with these interfaces, we cannot create platform specific objects in Xamarin Forms. Instead, we will create an extra interface for a manager object *(which does not exist)*. This manager object will be able to create the objects on our behalf, from inside the platform specific code.
 

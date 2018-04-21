@@ -48,4 +48,4 @@ namespace XamarinApp
             Counter2Label.Text = "" + Global.DT.MainCounter().Value;
         }
     }
-}
+} 
